@@ -1,0 +1,377 @@
+/*!
+ * 공통 CSS
+ */
+ .popupView .card-header {
+ 	cursor: auto;
+ }
+ .popupView .none{
+  display: none;
+ }
+ .popupView  .table-name{
+  display: block;
+  text-align: center;
+ }
+ 
+ .card-header {
+ 	cursor: move;
+ }
+ 
+ .card-option {
+	position: relative !important;
+	overflow: auto !important;
+	left: 0 !important;
+	right: 0 !important;
+}
+
+.card.reoption {
+	/* margin: 1rem; */
+	/* 수정 */
+	margin: .1rem;
+	height: 100%;
+}
+
+.left-red {
+	border-left: 4px solid #ff5454;
+}
+
+.left-redorange {
+	border-left: 4px solid #fe7d52;
+}
+
+.bg-redorange {
+	background: #fe7d52;
+}
+
+.left-orange {
+	border-left: 4px solid #fba659;
+}
+
+.bg-orange {
+	background: #fba659;
+}
+
+.bg-green {
+	background: #79c447;
+}
+
+.bg-gray {
+	background: #f2f2f2;
+}
+
+.left-yellow {
+	border-left: 4px solid #fabb3d;
+}
+
+.font-white {
+	color: #fff !important;
+}
+
+.font-green {
+	color: #79c447 !important;
+}
+
+.font-yellow {
+	color: #fabb3d !important;
+}
+
+.font-orange {
+	color: #fba659 !important;
+}
+
+.font-redorange {
+	color: #fe7d52 !important;
+}
+
+.font-red {
+	color: #ff5454 !important;
+}
+
+.font-blue {
+	color: #20a8d8 !important;
+}
+
+.btn-page {
+	color: #167495;
+	text-decoration: underline;
+	background-color: transparent;
+	border-color: transparent;
+	cursor: pointer;
+}
+
+.btn-page:hover {
+	color: #2fb5e1;
+	text-decoration: underline;
+	background-color: transparent;
+	border-color: transparent;
+	cursor: pointer;
+}
+
+.chartjs-tooltip {
+	position: absolute;
+	z-index: 1;
+	opacity: 1;
+	background: rgba(0, 0, 0, .7);
+	color: white;
+	border-radius: 3px;
+	-webkit-transition: all .1s ease;
+	transition: all .1s ease;
+	pointer-events: none;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+/* layout 간격조정(좁게) */
+/* .tab-content .tab-pane {
+    padding: 0 !important;
+} */
+
+/* tooltip */
+div.biz-tooltip {
+    position: absolute;
+    z-index: 1;
+    padding: 5px;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #000;
+    background-color: #f5f4ed;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #808074;
+    box-shadow: 3px 3px 10px rgba(0,0,0,.2);
+    pointer-events: none; 
+}
+
+div.equip-tooltip {
+	position: absolute;
+	z-index: 1;
+	padding: 1rem;
+	white-space: nowrap;
+	font-size: .9rem;
+	font-weight: normal;
+	text-align: left;
+	color: #fff;
+	background-color: #747474;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	pointer-events: none;
+}
+
+/* 검색필드 */
+.multiselect-wrapper {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.multiselect, input[type="text"], input[type="password"], input[type="search"],
+	input[type="number"], input[type="email"], input[type="time"], input[type="file"],
+	textarea, select {
+	border: 1px solid #acbbc2;
+	color: #1f2c33;
+	background-color: #fff;
+	outline: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: border-color 0.2s ease-out;
+	-moz-transition: border-color 0.2s ease-out;
+	transition: border-color 0.2s ease-out;
+}
+
+.multiselect-button, .multiselect {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.multiselect {
+	position: relative;
+	width: 100%;
+	min-height: 24px;
+	white-space: normal;
+}
+
+.multiselect .multiselect-list {
+	padding-left: .2rem;
+	padding-right: .7rem;
+	margin-bottom: .5rem;
+}
+
+.multiselect .multiselect-list li {
+	display: inline-block;
+	margin: 0.375rem 0.15rem 0 0.75rem;
+	white-space: nowrap;
+}
+
+.multiselect .multiselect-list li .subfilter-enabled {
+	padding: .2rem .7rem .2rem .5rem;
+    line-height: 1rem;
+}
+
+.multiselect .multiselect-list li input[type=text] {
+	border: 0;
+	width: 100%;
+}
+
+.subfilter-enabled {
+	display: inline-block;
+    position: relative;
+    height: 1.5rem;
+    padding: 0 4px;
+    color: #fff;
+    background-color: #768d99;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.subfilter-disable-btn {
+	width: 1rem;
+    height: 1.5rem;
+    line-height: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -12px;
+    color: #fff;
+    background-color: #768d99;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    opacity: 1;
+    filter: alpha(opacity = 100);
+    cursor: pointer;
+}
+
+.remove-btn::before, .overlay-close-btn::before, .subfilter-disable-btn::before {
+	content: "\00d7";
+}
+
+.multiselect-button, .multiselect {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.input-group-addon i, .multiselect-list .ui-datepicker-trigger i {
+	font-weight: bold;
+}
+
+.form-not-border {
+	border: none !important;
+    padding: 0.375rem 0;
+}
+
+.sch-more {
+	color: #808080;
+	text-decoration: underline;
+}
+
+/* datepicker */
+.multiselect-list .ui-datepicker-trigger {
+	position: absolute;
+	padding: 0.45rem 0.75rem;
+	margin-bottom: 0;
+	top: 0;
+	right: 0;
+	min-width: 40px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e515b;
+    text-align: center;
+    background-color: #f0f3f5;
+    border: none;
+	border-left: 2px solid #c2cfd6;	
+}
+
+.popupview .modal-footer{
+	display: block !important;
+	
+}
+
+.popup-scroll {
+	height: 15rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.popup_processview .modal-dialog{
+	max-width:800px !important;
+}
+
+/* scroll */
+.overx {
+	overflow-x: auto !important;
+}
+
+.overy {
+	overflow-x: hidden;
+	overflow-y: auto !important;
+	height: 30rem;
+}
+
+.serviceDetail .card-header {
+    cursor: auto;
+}
+
+.small {
+	font-size: smaller;
+}
+
+.title-ellipsis {
+	max-width: 105px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.title-percent-ellipsis {
+	max-width: 60%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.cursorp {
+	cursor: pointer !important;
+}
+
+/* ionRangeSlider(수정) */
+.irs-grid-text {
+	color: #999;
+}
+
+/* 알림내역 테이블 */
+table.break th, table.break td {
+	word-break: break-word;
+}
+
+/* top 버튼 */
+.lbtn_top {
+	z-index: 1;
+	position: fixed;
+	bottom: 7rem;
+	right: 3rem;
+	width: 3.5rem;
+	height: 3.5rem;
+	margin-bottom: 0 !important;
+	text-indent: -9999px;
+	background: url(../img/lbtn_top.png) 0 0;
+	background-size: 6.5rem;
+}
+
+.lbtn_top.on {
+	background-position: right 0;
+}
+
+/* ag-grid */
+.ag-center {
+	margin: auto;
+	top: 50%;
+	bottom: 0;
+	line-height: normal !important;
+}

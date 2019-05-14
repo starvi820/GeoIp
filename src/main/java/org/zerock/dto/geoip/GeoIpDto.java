@@ -1,0 +1,51 @@
+package org.zerock.dto.geoip;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class GeoIpDto {
+	
+	
+	@NotNull
+	@Size(min=1,max=100)
+	private String ipStart;
+	
+	@NotNull
+	@Size(min=1,max=100)
+	private String ipEnd;
+	
+	@NotNull
+	private Long ipStartNumber;
+	private Long ipEndNumber;
+	
+	
+	@Size(min=1,max=100)
+	private String countryName;
+	
+	@Size(min=1,max=100)
+	private String cityName;
+	
+	@NotNull
+	@Size(min=1,max=100)
+	private String publicIp;
+	
+	@NotNull
+	private Boolean isPrivateIp;
+	
+	@NotNull
+	@Size(min=1,max=100)
+	private String cityLocationName;
+	@NotNull
+	@Size(min=1,max=100)
+	private String companyName;
+	
+	
+	
+	
+
+}

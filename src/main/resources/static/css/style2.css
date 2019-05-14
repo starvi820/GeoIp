@@ -1,0 +1,204 @@
+/*!
+ * À±¾Æ
+ */
+.popup_bg {
+	border-top: 1px solid #c2cfd6;
+}
+.compoundList .card{
+	    width: 40rem;
+    height: 40rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    margin-left: 2rem;
+}
+.dashboarList .btn{
+	padding : .2rem .4rem;
+}
+
+.dashboarList .avatar{
+	width : 4rem;
+}
+
+.dashstatus_danger{
+	background: red;
+    z-index: 100 !important;
+    opacity: 0.5;
+}
+
+.grid-stack > .grid-stack-item > .grid-stack-item-content{
+  z-index: 0;
+}
+
+.equiList_table th {
+	border-right: .1rem solid #c2cfd6;
+}
+.breadcrumb-menu2 {
+    margin-left: auto;
+}
+
+.bg_table{
+	width: 100%;
+	position: relative;
+}
+.bg_table table {
+	width: 100%;
+	position: relative;
+}
+
+.equimentDetail .card-block{
+	padding :1.25rem;
+}
+.equimentDetail{
+	height: 43rem;
+	overflow: scroll;
+	overflow-x:hidden;
+}
+
+.serviceDetail {
+    height: 21.25rem;
+}
+
+.processDetail {
+    height: 47.25rem;
+}
+
+.equimentDeView .card-header{
+	    cursor: auto;
+}
+.serviceDetail .card-body{
+    overflow: scroll;
+    overflow-x:hidden;
+}
+
+.topologyList{
+
+	border-top: 1px solid #c2cfd6;
+	border-bottom: 1px solid #c2cfd6;
+	width: 100%;
+	padding : 0;
+	list-style-type: none;
+	
+}
+.topologyList li ul{
+ display: none;
+	
+}
+
+.topologyList li{
+	width: 100%;
+	
+}
+.topologyList .btn-group .btn{
+	padding: 0 0.75rem;
+}
+.topologyList nav{
+ padding : 1.2rem;
+}
+
+.topologyList ul{
+	list-style-type: none;
+}
+.topologyList .open> nav{
+	background: lightblue;
+}
+
+
+.equipListChart .card-header{
+	cursor: auto;
+}
+ .process-setting{
+    padding: .1rem .5rem;
+    color: #29363d;
+    text-decoration: none;
+    background: transparent;
+       font-size: 1.5rem;
+}
+.process-setting:hover {
+	border: .1rem solid #20a8d8;
+	color: #20a8d8;
+	text-decoration: none;
+}
+
+.dashBoardView .orangecolor_dash {
+  fill: orange;
+}
+
+.dashBoardView g {
+  background-color: #F1F3F3    
+}
+/* .compoundView{
+	width: 100%;
+	height : 100%;
+} */
+
+.dashBoardView  .dashboard_real{
+background-color: white;
+padding:10px;   
+}
+.dashBoardView .axis {
+	font: 7px sans-serif;
+}
+.dashBoardView .axis path,
+.dashBoardView .axis line {
+  fill: none;
+  stroke: #D4D8DA;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.card_topology{
+   display:none;
+    width: 100%;
+    height: 15rem;
+}
+
+.card_topology_tree{
+   display:none;
+    width: 20rem;
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.card_topology_tree .card{
+    border-radius: 1rem;
+}
+
+.card_topology_tree .card-header{
+   border-radius: 1rem 1rem 0 0;
+}
+.card_topology_tree .card-footer{
+   border-radius: 0 0 1rem 1rem;
+}
+
+.card_topology_tree .card-header, .card_topology .card-header{
+   cursor: auto;
+}
+
+/*¼³Á¤*/
+.popupview .tab-pane {
+	padding: 1rem!impotant;
+}
+
+@media ( max-width : 991px) {
+	.dashBoardView .card_topology_tree .col-md-6 {
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	.dashBoardView .card_topology_tree  .col-md-5 {
+		-ms-flex: 0 0 41.66667%;
+		flex: 0 0 41.66667%;
+		max-width: 41.66667%;
+	}
+	.dashBoardView .card_topology_tree {
+		width: 10rem !important;
+		font-size: .4rem !important;
+		border-radius: .5rem;
+	}
+	.dashBoardView .card-header {
+		padding: .5rem;
+	}
+	.dashBoardView .card-header .fa {
+		font-size: .4rem;
+	}
+}

@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://10.10.80.201/impactplus
+    username: root
+    password: impactplus
+    
+   
+  mvc:  
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    contentnegotiation:
+      favor-parameter: true
+      favor-path-extension: true
+        
+      
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  thymeleaf:
+    cache: false
+    
+server:
+  port: 8080
+

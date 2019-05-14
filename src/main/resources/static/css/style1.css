@@ -1,0 +1,878 @@
+/*!
+ * 서영
+ */
+
+/* 대시보드 - overview */
+.openNavMenu {
+	padding: 1rem 1.3rem;
+	height: 8rem;
+	color: #929292;
+	text-align: center;
+}
+
+.openNavMenu.active {
+	background: #000;
+	color: #fff;
+}
+
+.openNavMenu div.info {
+	float: left;
+	width: 100%;
+}
+
+.openNavMenu div.info div {
+	float: left;
+	width: 48%;
+	margin: 0 4% 10px 0;
+}
+
+.openNavMenu div.info div span {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.openNavMenu div.graph {
+	width: 100%;
+}
+
+.opmOverview .graph>div {
+	position: relative;
+	float: left;
+	padding: 0 20px;
+	width: 50% !important;
+	height: 100%;
+}
+
+.openNavMenu div.graph div:first-child {
+	float: right !important;
+    top: 20px;
+    left: -20px;
+}
+
+.openNavMenu div.graph div:last-child {
+	top: 15px;
+    left: -2px !important;
+}
+
+.nav-pills.fixed {
+	position: fixed;
+    width: 100%;
+    z-index: 100;
+    left: 3rem;
+}
+
+.nav-pills .nav-item {
+	cursor: pointer;
+}
+
+.nav-pills.bg-dark .nav-link {
+	padding: 0.7rem 1rem;
+	width: 10rem;
+	text-align: center;
+}
+
+.nav-pills.bg-dark a {
+	color: #bfbfbf;
+}
+
+.nav-pills .nav-link.active {
+	background: #000;
+	color: #20a8d8;
+}
+
+.navMenuTg {
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	right: 4rem;
+	cursor: pointer;
+}
+
+.navMenuTg:before {
+	width: 10px;
+	height: 10px;
+	content: '';
+	border: 1px solid #fff;
+	border-right: transparent;
+	border-bottom: transparent;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	/* -webkit-transform: rotate(45deg); */
+	-o-transform: rotate(45deg);
+	transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+
+.navMenuTg.rotate {
+	transform: rotate(180deg);
+}
+
+.pb-9 {
+	padding-bottom: 9rem !important;
+}
+
+.dropdown-menu.custom {
+	border: 1px solid rgb(128, 128, 116);
+	box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 10px;
+}
+
+.gauge-info {
+	width: 100%;
+	text-align: center;
+	border-radius: .4rem;
+}
+
+.chart-top {
+	display: inline-block;
+	padding: .5rem;
+    width: 60%;
+    height: 100%;
+    vertical-align: top;
+    background: #eee;
+}
+
+.table-top {
+	display: inline-block;
+	width: 38%;
+	height: 100%;
+}
+
+.table-top table {
+	margin: 0;
+	height: 100%;
+	border: 1px solid #c2cfd6;
+}
+
+.table-top table th {
+	vertical-align: middle;
+	border: 1px solid #c2cfd6;
+	border-bottom: 2px solid #c2cfd6;
+}
+
+.table-top table td {
+    padding: .25rem .45rem;
+    vertical-align: middle;
+    border: none;
+}
+
+#mynetwork, #bizCreate {
+	position: relative;
+	height: 100%;
+}
+/* IE11 만 적용  */
+_:-ms-fullscreen, :root #mynetwork, #bizCreate {
+	height: 25rem;
+	margin-bottom: 3rem;
+}
+
+.svg-container {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    position: relative;
+}
+
+.svg-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+
+svg {
+	/* margin-top: 2rem; */
+	background-color: #FFF;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+#bizCreate svg{
+	margin-top: 3rem;
+}
+
+svg:not (.active ):not (.ctrl ) {
+	cursor: crosshair;
+}
+
+path.link {
+	fill: none;
+	/* stroke: gray; */
+	stroke-width: 1px;
+	cursor: default;
+}
+
+svg:not (.active ):not (.ctrl ) path.link {
+	cursor: pointer;
+}
+
+g.link.selected {
+	stroke-dasharray: 10, 2;
+}
+
+path.link.dragline {
+	pointer-events: none;
+}
+
+path.link.hidden {
+	stroke-width: 0;
+}
+
+image.node {
+	stroke-width: 1.5px;
+	cursor: pointer;
+}
+
+rect.node, path.link {
+	cursor: pointer;
+}
+
+image.node.reflexive {
+	stroke: #008000 !important;
+	stroke-width: 2.5px;
+}
+
+.image-border {
+	fill: transparent;
+	stroke: #008000 !important;
+	stroke-width: 2.5px;
+	shape-rendering: crispEdges;
+}
+
+.image-border:hover {
+	stroke: black;
+}
+
+text {
+	font: .5rem sans-serif;
+	pointer-events: none;
+}
+
+text.id {
+	text-anchor: middle;
+}
+
+.tb-more {
+	background: #f0f3f5;
+}
+
+.tb-more-left {
+	border-left: 1px solid #c2cfd6;
+}
+
+.tb-more-right {
+	border-right: 1px solid #c2cfd6;
+}
+
+.chart-top .text-right {
+	float: right;
+}
+
+.breadcrumb-menu2 {
+    margin-left:  auto;
+}
+
+.form-check-inline .alert {
+	padding: 0.1rem 1.25rem !important;
+}
+
+/* map */
+.map-container {
+	margin: 0 auto;
+	padding: 6px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(153, 153, 153);
+	box-shadow: rgba(64, 64, 64, 0.1) 0px 2px 5px;
+	width: 100%;
+	height: 400px;
+}
+
+#map {
+	width: 100%;
+	height: 90%;
+	z-index: 1;
+}
+
+.p-25 {
+	padding: 0.6rem !important;
+}
+
+.status-legend {
+	display: inline-block;
+	color: #fff;
+	border-radius: 1rem;
+	width: 2rem;
+	height: 2rem;
+	padding-top: .3rem;
+}
+
+/* map popup 커스터마이징  */
+.popupCustom .leaflet-popup-content-wrapper {
+	background: #fff;
+    line-height: 24px;
+    border-radius: 0;
+    border-top: 1.5rem solid #2c3e50;
+}
+
+.leaflet-container .custom-title {
+	position: absolute;
+	top: -.1rem;
+	left: 0;
+	padding: .3rem;
+	color: #fff;
+	font-weight: bold;
+	font-size: .9rem;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+	color: #eee !important;
+}
+
+.popupCustom .leaflet-popup-tip {
+	background: #fff;
+}
+
+.popupCustom .leaflet-popup-content-wrapper a {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.popupCustom .leaflet-popup-tip-container {
+	width: 30px;
+	height: 15px;
+}
+
+/* business */
+/* .list-scroll {
+	height: calc(100vh - 55px);
+	background: #fff;
+} */
+
+.list-scroll a {
+    border-bottom: 0;
+	cursor: pointer;
+}
+
+.list-scroll a:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.group-subject {
+	display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    padding-right: 0;
+    margin-bottom: .5rem;
+    list-style: none;
+    background-color: #fff;
+    border-bottom: 1px solid #c2cfd6;
+}
+
+.biz-legend {
+	display: inline-block;
+	text-indent: -99999px;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+
+.biz-legend.circle {
+	border-radius: 1rem;
+}
+
+.biz-legend2 {
+	display: inline-block;
+	text-indent: -99999px;
+	width: 1.2rem;
+	height: .8rem;
+}
+
+.biz-legend2.bo-gray {
+	border-bottom: 2px solid gray;
+}
+
+.biz-legend2.bo-purple {
+	border-bottom: 2px solid purple;
+}
+
+.biz-legend2.bo-blue {
+	border-bottom: 2px solid blue;
+}
+
+.biz-legend2.bo-green {
+	border-bottom: 2px solid green;
+}
+
+.biz-legend2.bo-orange {
+	border-bottom: 2px solid orange;
+}
+
+.biz-legend2.bo-brown {
+	border-bottom: 2px solid brown;
+}
+
+.biz-legend2.bo-red {
+	border-bottom: 2px solid red;
+}
+
+#deviceFilter .subfilter-enabled.on {
+	background-color: #4e5f67 !important;
+}
+
+#deviceFilter .subfilter-disable-btn.on {
+	background-color: #4e5f67 !important;
+}
+
+/* popup */
+.layerpop {
+	display: table;
+	position: fixed;
+	z-index: 300;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0 1.6rem;
+	background: rgba(0, 0, 0, .75);
+}
+
+.popup_box {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.layerpop.alert {
+	padding: 0 1.3rem;
+}
+
+.popup {
+	margin: 0 25%;
+	width: 45rem;
+	max-height: 80%;
+	background: #fff;
+	border-radius: .2rem;
+	border: 1px solid #7c7c7e;
+	box-shadow: 0 2px 2px .3rem rgba(0, 0, 0, .2);
+}
+
+.popup_header {
+	padding: 0 1.5rem;
+}
+
+.popup_header>p {
+	color: #818294;
+	font-size: 1.5rem;
+	line-height: 4.1rem;
+	text-align: center;
+	border-bottom: 1px solid #dae0f1;
+}
+
+.popup_body {
+	overflow-y: auto;
+	min-height: 10.4rem;
+	max-height: 36.1rem;
+	padding: 1.5rem 2rem;
+	font-size: 1.4rem;
+}
+
+.popup_body .image {
+	display: inline-block;
+	margin: 0 1rem;
+	width: 6rem;
+	height: 6rem;
+	border: 3px solid #dae0f1;
+	border-radius: 50%;
+	text-indent: -999px;
+	cursor: pointer;
+}
+
+input[type=radio] {
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.image.icon1 {
+	background: url(../img/sample.png) no-repeat center 45%;
+    background-size: 5rem;
+}
+
+.image.icon2 {
+	background: url(../img/sample2.png) no-repeat center 45%;
+    background-size: 5rem;
+}
+
+.image.icon3 {
+	background: url(../img/sample3.png) no-repeat center 45%;
+    background-size: 5rem;
+}
+
+.layerpop.alert .popup_body {
+	text-align: center;
+	line-height: 4.4
+}
+
+.popup_footer {
+	border-color: #dae0f1;
+}
+
+.popup_footer .btn_txt {
+	width: 7.9rem !important;
+	margin: 0 .5rem;
+}
+
+.btn_txt {
+	display: block;
+	height: 2.9rem;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    border-radius: 1.95rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_txt.white {
+	background: #fff;
+	color: #3a539b;
+	border: 1px solid #bec1ce;
+}
+
+.btn_txt.white:active {
+	color: #3a539b;
+	background: #e6e6e6;
+}
+
+.btn_txt.white2 {
+	background: #fff;
+	color: #3a539b;
+	border: 1px solid #3a539b;
+}
+
+.btn_txt.white2:active {
+	color: #3a539b;
+	background: #dae0f1;
+	border-color: #3a539b;
+}
+
+.btn_txt.blue {
+	color: #fff;
+	background: #3a539b;
+}
+
+.btn_txt.blue:active {
+	background: #3a539b;
+}
+
+.btm_wrap {
+	padding: 1.1rem 0 1.2rem;
+	text-align: center;
+	border-top: 1px solid #3a539b;
+}
+
+.btm_wrap.fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-color: #dee0e7;
+	background-color: #fff;
+}
+
+.btm_wrap .btn_txt {
+	display: inline-block;
+	width: 11.6rem;
+	margin: 0 1rem;
+}
+
+.btm_wrap .btn_txt:first-child {
+	margin-left: 0;
+}
+
+.btm_wrap .btn_txt:last-child {
+	margin-right: 0;
+}
+
+/* 상세 */
+.time-tab {
+    background: #fdfdfd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+.time-tab .nav-pills .nav-link.active {
+	color: #20a8d8;
+    border-bottom: 5px solid #20a8d8;
+    background: none;
+}
+
+/* 보고서 */
+.underline {
+	text-decoration: underline !important;
+}
+
+span.delete {
+	position: absolute;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -.6rem;
+    margin-left: -.6rem;
+	background: url(../img/btn_close.png) no-repeat center center;
+	background-size: 1.5rem;
+	cursor: pointer;
+}
+
+.text-center.underline span.delete {
+    margin-left: -4.5rem;
+}
+
+nav.custom .page-item input {
+	position: relative;
+	display: block;
+	padding: 0.5rem 0.75rem;
+	margin-left: -1px;
+	line-height: 1.25;
+	color: #20a8d8;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: .4rem;
+	width: 3rem;
+    text-align: center;
+}
+
+nav.custom .page-item span.page-info {
+	position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    width: 2rem;
+}
+
+div.tooltip_to {	
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2rem;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+}
+
+#toolip_total{
+	/* display: none;
+	position: absolute; */
+}
+
+/*통계*/
+.plusBtn, .minusBtn{
+	position: absolute;
+    padding: 0.45rem 0.75rem;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    min-width: 40px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e515b;
+    text-align: center;
+    background-color: #f0f3f5;
+    border: none;
+}
+
+/*토폴로지*/
+.found {
+	fill: #ff4136;
+	stroke: #ff4136;
+}
+
+.topologytree {
+   position: relative;
+   height: 23rem;
+   z-index: 100;
+}
+
+.topologytree .nodeGroupLegend {
+    position: absolute;
+    margin: 15px 15px 15px 40px;
+}
+
+.topologytree .nodeGroupLegend .groupItem {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0 4px 0 16px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #D5D5D5;
+    color: #000;
+    font-weight:bold;
+    cursor: pointer;
+    background-color: skyblue;
+}
+
+.topology .node circle {
+   fill: #fff;
+   stroke: steelblue;
+   stroke-width: 3px;
+}
+
+.topology .node text {
+   font: 12px sans-serif;
+}
+
+.topology .link {
+   fill: none;
+   stroke: #ccc;
+   stroke-width: 2px;
+}
+.topology .dragline{
+	stroke: red;
+}
+.topology .addpath{
+	stroke: blue;
+}
+
+/* 
+.card_topology{
+    width: 100%;
+    height: 15rem;
+} */
+.card_topology .card{
+	border:0;
+}
+
+.card_topology_tree{
+   display:none;
+    width: 20rem;
+    height: 15rem;
+    border-radius: 1rem;
+}
+
+.card_topology_tree .card{
+    border-radius: 1rem;
+}
+
+.card_topology_tree .card-header{
+   border-radius: 1rem 1rem 0 0;
+}
+.card_topology_tree .card-footer{
+   border-radius: 0 0 1rem 1rem;
+}
+
+.card_topology_tree .card-header, .card_topology .card-header{
+   cursor: auto;
+}
+
+.topology_rightmenu{
+	display:none;
+	position: absolute;
+    z-index: 100;
+    right:0;
+    top: 0;
+    width:0;
+    height: 22rem;
+    background: #fff;
+    border-left: 1px solid #c2cfd6;
+}
+.tooltip_active{
+ display:block;
+	width: 300px;
+} 
+
+.topology-tab{
+	overflow-y:scroll;
+	height: 20rem;
+}
+
+/* popup(알림정책) */
+.small-input {
+	display: inline-block;
+	width: 10%;
+}
+
+.mid-input {
+	display: inline-block;
+	width: 20%;
+}
+
+.slider-range {
+	height: 200px;
+}
+
+.slider-range .ui-widget-header {
+	padding: .3rem;
+	background: red;
+}
+
+.slider-range.double .ui-slider-handle {
+	padding-top: .1rem;
+	margin-top: -.8em;
+	margin-left: -.4em;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	line-height: 1.6em;
+}
+
+.slider-range.simple .ui-slider-handle {
+	padding-top: .1rem;
+	margin-top: -.8em;
+	margin-left: -1.3em;
+	width: 4em;
+	height: 2em;
+	text-align: center;
+	line-height: 1.6em;
+}
+
+.slider-range .ui-state-default,
+.slider-range .ui-widget-content .ui-state-default,
+.slider-range .ui-widget-header .ui-state-default,
+.slider-range .ui-button,
+html .slider-range .ui-button.ui-state-disabled:hover,
+html .slider-range .ui-button.ui-state-disabled:active {
+	background: #fff;
+	color: #fba659;
+}
+
+/*설정 form 구분*/
+.set_division{
+	border:1px solid #c2cfd6;
+	background-color:#f0f3f5;
+}
+
+/*설정 form 구분*/
+.set_division{
+	border:1px solid #c2cfd6;
+	background-color:#f0f3f5;
+}
+.set_logform .logrule_form{
+	display: none;
+}
+.set_logform >.active {
+    display: block;
+}
+
+.modal-dialog_tem{
+	max-width: 800px !important;
+}
